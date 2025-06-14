@@ -1,0 +1,105 @@
+<!-- staff.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сотрудники | Росфинмониторинг</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/rosfin_logo.png" alt="Логотип" class="logo" />
+      <div class="site-title">
+        <h1>Федеральная служба<br>по финансовому мониторингу</h1>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О службе</a></li>
+        <li><a href="methods.html">Методы мошенников</a></li>
+        <li><a href="protection.html">Как защититься</a></li>
+        <li><a href="staff.html" class="active">Сотрудники</a></li>
+        <li><a href="docs.html">Документы</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="media.html">Фото и видео</a></li>
+        <li><a href="blacklist.html">Чёрный список</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="staff-section">
+      <h2>Сотрудники службы</h2>
+      <div class="staff-grid">
+        <div class="staff-card" onclick="openModal(0)">
+          <img src="images/agent1.jpg" alt="">
+          <h3>Иван Петров</h3>
+          <p>Начальник отдела кибербезопасности</p>
+        </div>
+        <div class="staff-card" onclick="openModal(1)">
+          <img src="images/agent2.jpg" alt="">
+          <h3>Анна Сидорова</h3>
+          <p>Специалист по финансовому анализу</p>
+        </div>
+        <div class="staff-card" onclick="openModal(2)">
+          <img src="images/agent3.jpg" alt="">
+          <h3>Михаил Андреев</h3>
+          <p>Аналитик операций в реальном времени</p>
+        </div>
+        <div class="staff-card" onclick="openModal(3)">
+          <img src="images/agent4.jpg" alt="">
+          <h3>Ольга Кузнецова</h3>
+          <p>Куратор проектов антифрода</p>
+        </div>
+        <div class="staff-card" onclick="openModal(4)">
+          <img src="images/agent5.jpg" alt="">
+          <h3>Роман Яковлев</h3>
+          <p>Оперативный сотрудник</p>
+        </div>
+        <div class="staff-card" onclick="openModal(5)">
+          <img src="images/agent6.jpg" alt="">
+          <h3>Елена Морозова</h3>
+          <p>Эксперт по выявлению мошеннических схем</p>
+        </div>
+        <div class="staff-card" onclick="openModal(6)">
+          <img src="images/agent7.jpg" alt="">
+          <h3>Алексей Громов</h3>
+          <p>Специалист по цифровым следам</p>
+        </div>
+        <div class="staff-card" onclick="openModal(7)">
+          <img src="images/agent8.jpg" alt="">
+          <h3>Наталья Фролова</h3>
+          <p>Заместитель руководителя службы</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-name"></h3>
+        <p id="modal-role"></p>
+        <h4>Краткие дела:</h4>
+        <ul id="modal-cases"></ul>
+        <h4>Подробности:</h4>
+        <table id="modal-table">
+          <thead>
+            <tr><th>Дата</th><th>Дело</th><th>Результат</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Федеральная служба по финансовому мониторингу</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

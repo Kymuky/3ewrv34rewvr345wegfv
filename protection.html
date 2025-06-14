@@ -1,0 +1,57 @@
+<!-- protection.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Как защититься | Росфинмониторинг</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/rosfin_logo.png" alt="Логотип" class="logo" />
+      <div class="site-title">
+        <h1>Федеральная служба<br>по финансовому мониторингу</h1>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="methods.html">Методы мошенников</a></li>
+        <li><a href="protection.html" class="active">Как защититься</a></li>
+        <li><a href="staff.html">Сотрудники</a></li>
+        <li><a href="docs.html">Документы</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="media.html">Фото и видео</a></li>
+        <li><a href="blacklist.html">Чёрный список</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h2>Рекомендации гражданам</h2>
+      <ul>
+        <li>Никогда не сообщайте код из SMS, даже "банку"</li>
+        <li>Не переходите по подозрительным ссылкам в мессенджерах</li>
+        <li>Проверяйте сайт — домен и сертификат</li>
+        <li>Скачивайте приложения только из официальных магазинов</li>
+        <li>Не передавайте паспортные данные незнакомым людям</li>
+      </ul>
+      <p>
+        <a href="files/antifraud_guide.pdf" download>Скачать памятку (PDF)</a>
+      </p>
+      <h3>Проверить номер на мошенничество:</h3>
+      <input type="text" id="checkNumber" placeholder="+7 900 123-45-67" />
+      <button onclick="checkPhone()">Проверить</button>
+      <p id="checkResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Федеральная служба по финансовому мониторингу</p>
+  </footer>
+</body>
+</html>

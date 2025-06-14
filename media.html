@@ -1,0 +1,62 @@
+<!-- media.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фото и видео | Росфинмониторинг</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/rosfin_logo.png" alt="Логотип" class="logo" />
+      <div class="site-title">
+        <h1>Федеральная служба<br>по финансовому мониторингу</h1>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О службе</a></li>
+        <li><a href="methods.html">Методы мошенников</a></li>
+        <li><a href="protection.html">Как защититься</a></li>
+        <li><a href="staff.html">Сотрудники</a></li>
+        <li><a href="docs.html">Документы</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="media.html" class="active">Фото и видео</a></li>
+        <li><a href="blacklist.html">Чёрный список</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h2>Фотооперации и видеоматериалы</h2>
+
+      <h3>📷 Галерея</h3>
+      <div class="gallery">
+        <img src="images/photo1.jpg" alt="Операция 1" onclick="openFull(this)">
+        <img src="images/photo2.jpg" alt="Операция 2" onclick="openFull(this)">
+        <img src="images/photo3.jpg" alt="Колл-центр" onclick="openFull(this)">
+        <img src="images/photo4.jpg" alt="Изъятые SIM" onclick="openFull(this)">
+      </div>
+      <div id="fullImageModal" class="modal" onclick="this.style.display='none'">
+        <img id="fullImage" src="" alt="Увеличенное">
+      </div>
+
+      <h3>🎥 Видео-демонстрация</h3>
+      <video width="100%" controls>
+        <source src="media/antifraud_demo.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <p><em>Фрагмент видео-инструкции по выявлению телефонных мошенников</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Федеральная служба по финансовому мониторингу</p>
+  </footer>
+</body>
+</html>

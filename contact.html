@@ -1,0 +1,67 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакты | Росфинмониторинг</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/rosfin_logo.png" alt="Логотип" class="logo" />
+      <div class="site-title">
+        <h1>Федеральная служба<br>по финансовому мониторингу</h1>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="contact.html" class="active">Контакты</a></li>
+        <li><a href="methods.html">Методы мошенников</a></li>
+        <li><a href="protection.html">Как защититься</a></li>
+        <li><a href="staff.html">Сотрудники</a></li>
+        <li><a href="docs.html">Документы</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="media.html">Фото и видео</a></li>
+        <li><a href="blacklist.html">Чёрный список</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h2>Обратная связь</h2>
+      <form onsubmit="return validateForm()">
+        <label>Имя:<br><input type="text" id="name" required></label><br>
+        <label>Email:<br><input type="email" id="email" required></label><br>
+        <label>Сообщение:<br><textarea id="message" rows="5" required></textarea></label><br>
+        <button type="submit">Отправить</button>
+      </form>
+      <p id="formResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Федеральная служба по финансовому мониторингу</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const msg = document.getElementById("message").value.trim();
+      const res = document.getElementById("formResult");
+      if (!name || !email || !msg) {
+        res.textContent = "Пожалуйста, заполните все поля.";
+        res.style.color = "red";
+        return false;
+      }
+      res.textContent = "Спасибо за обращение!";
+      res.style.color = "green";
+      return false; /* имитация отправки */
+    }
+  </script>
+</body>
+</html>
