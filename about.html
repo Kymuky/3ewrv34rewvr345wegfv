@@ -1,4 +1,3 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,12 +7,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <img src="images/rosfin_logo.png" alt="Логотип" class="logo" />
-      <div class="site-title">
-        <h1>Федеральная служба<br>по финансовому мониторингу</h1>
-      </div>
+      <img src="images/rosfin_logo.png" alt="Логотип" class="logo">
+      <div class="site-title"><h1>Федеральная служба<br>по финансовому мониторингу</h1></div>
     </div>
     <nav>
       <ul class="nav-menu">
@@ -22,36 +21,108 @@
         <li><a href="methods.html">Методы мошенников</a></li>
         <li><a href="protection.html">Как защититься</a></li>
         <li><a href="staff.html">Сотрудники</a></li>
-        <li><a href="docs.html">Документы</a></li>
-        <li><a href="news.html">Новости</a></li>
         <li><a href="media.html">Фото и видео</a></li>
-        <li><a href="blacklist.html">Чёрный список</a></li>
         <li><a href="contact.html">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- MAIN: ABOUT -->
   <main>
-    <section class="content-section">
-      <h2>История и задачи службы</h2>
-      <p>Основана в 2001 году для контроля финансовых операций и противодействия отмыванию преступных доходов. Основные функции:</p>
+    <!-- Миссия & Видение -->
+    <section class="content-section about">
+      <h2>Миссия и видение</h2>
+      <p><strong>Миссия:</strong> обеспечить прозрачность и безопасность финансовых потоков, защитить граждан и бизнес от мошеннических практик.</p>
+      <p><strong>Видение:</strong> создать единую, интеллектуальную систему анализа, предсказывающую и блокирующую мошеннические схемы в реальном времени.</p>
+    </section>
+
+    <!-- История -->
+    <section class="content-section history">
+      <h2>Ключевые вехи в истории службы</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="year">2001</span>
+          <p>Учреждение Росфинмониторинга постановлением Правительства Российской Федерации.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2005</span>
+          <p>Запуск первой автоматизированной системы выявления подозрительных транзакций.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2012</span>
+          <p>Интеграция с банками и кредитными организациями по обмену оперативными данными.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2018</span>
+          <p>Внедрение ML-моделей для анализа больших данных и выявления аномалий.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2023</span>
+          <p>Расширение функций на работу с eSIM и криптовалютными операциями.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Задачи и функции -->
+    <section class="content-section tasks">
+      <h2>Основные задачи и функции</h2>
       <ul>
-        <li>Анализ финансовых потоков</li>
-        <li>Взаимодействие с правоохранительными органами</li>
-        <li>Ведение реестров подозрительных операций</li>
-        <li>Разработка методик выявления мошенничества</li>
+        <li>Мониторинг и анализ денежных переводов на предмет признаков легализации преступных доходов.</li>
+        <li>Взаимодействие с МВД, ФСБ, Следственным комитетом и другими органами.</li>
+        <li>Ведение реестра подозрительных операций и номинальных клиентов.</li>
+        <li>Разработка методических рекомендаций для банков и МФО.</li>
+        <li>Проведение обучающих семинаров и публикация открытых отчётов.</li>
       </ul>
-      <h3>Цели на 2025 год:</h3>
-      <ol>
-        <li>Увеличить количество заблокированных мошеннических колл-центров на 30 %</li>
-        <li>Расширить базу подозрительных eSIM-карт</li>
-        <li>Внедрить ML-систему для оперативного анализа транзакций</li>
-      </ol>
+    </section>
+
+    <!-- Организационная структура -->
+    <section class="content-section structure">
+      <h2>Организационная структура</h2>
+      <img src="images/structure.png" alt="Структура службы" class="full-img">
+      <p>Служба состоит из центрального аппарата и восьми региональных подразделений, каждое из которых включает отделы аналитики, кибербезопасности и взаимодействия с правоохранителями.</p>
+    </section>
+
+    <!-- Интересные факты -->
+    <section class="content-section facts">
+      <h2>Интересные факты</h2>
+      <div class="fact-grid">
+        <div class="fact-card">
+          <img src="images/fact1.jpg" alt="Факт 1">
+          <p><strong>3,5&nbsp;млрд</strong> проверенных транзакций в год.</p>
+        </div>
+        <div class="fact-card">
+          <img src="images/fact2.jpg" alt="Факт 2">
+          <p><strong>2&nbsp;млн</strong> заблокированных мошеннических номеров.</p>
+        </div>
+        <div class="fact-card">
+          <img src="images/fact3.jpg" alt="Факт 3">
+          <p><strong>15&nbsp;тыс.</strong> обученных сотрудников банков.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ключевые проекты -->
+    <section class="content-section projects">
+      <h2>Ключевые проекты</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/project1.jpg" alt="Проект 1">
+          <h3>Anti-SIM</h3>
+          <p>Система автоматической блокировки подозрительных eSIM-карт.</p>
+        </div>
+        <div class="project-card">
+          <img src="images/project2.jpg" alt="Проект 2">
+          <h3>DataGuard</h3>
+          <p>Платформа анализа больших данных для мониторинга отмывания средств.</p>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Федеральная служба по финансовому мониторингу</p>
   </footer>
+
 </body>
 </html>
