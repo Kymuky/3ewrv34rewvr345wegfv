@@ -1,21 +1,42 @@
-/* ===== Общие стили ===== */
+/* ===================================================================
+   ================ GLOBAL STYLES =================
+   =================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  line-height: 1.6;
   background: #f2f5f8;
-  color: #222;
+  color: #333;
 }
-a { color: #003366; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: #003366;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
 
-/* ===== HEADER ===== */
+/* ===================================================================
+   ================ HEADER & NAV =================
+   =================================================================== */
 header {
   background: #003366;
   color: #fff;
   padding: 20px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .logo-container {
   display: flex;
@@ -23,82 +44,99 @@ header {
 }
 .logo {
   width: 60px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 .site-title h1 {
   font-size: 20px;
-  margin: 0;
   line-height: 1.2;
 }
-nav .nav-menu {
+nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
-  padding: 0;
-  margin: 10px 0 0;
 }
-nav .nav-menu a {
+nav a {
   color: #fff;
-  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background .3s, color .3s;
 }
-nav .nav-menu a.active {
-  text-decoration: underline;
+nav a.active,
+nav a:hover {
+  background: #ffcc00;
+  color: #003366;
 }
 
-/* ===== MAIN / HOME ===== */
-main#home {
-  padding: 0 20px;
+/* ===================================================================
+   ================ MAIN LAYOUT =================
+   =================================================================== */
+main {
+  padding: 20px;
 }
 
-/* HERO */
-.hero {
+/* ===================================================================
+   ================ INDEX PAGE STYLES ================
+   =================================================================== */
+/* Hero shared */
+.hero,
+.about-hero {
   background: url('images/hero_bg.jpg') center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
   position: relative;
   border-radius: 6px;
+  overflow: hidden;
   margin: 20px 0;
 }
-.hero::before {
+.hero::before,
+.about-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  border-radius: 6px;
 }
-.hero h1, .hero p, .hero button {
+.hero .hero-inner,
+.about-hero .hero-inner {
   position: relative;
-  z-index: 1;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
 }
-.hero button {
-  margin-top: 20px;
-  padding: 12px 24px;
+.hero h1,
+.about-hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.hero p,
+.about-hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.hero button,
+.about-hero button {
+  padding: 12px 28px;
   font-size: 16px;
-  border: none;
   background: #ffcc00;
   color: #003366;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-/* STATS */
+/* Stats (index) */
 .stats {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-top: -40px;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 .stat-card {
   background: #fff;
-  border-radius: 6px;
-  padding: 20px;
-  text-align: center;
   width: 180px;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 .stat-card img {
@@ -115,7 +153,7 @@ main#home {
   margin: 5px 0 0;
 }
 
-/* ACHIEVEMENTS */
+/* Achievements */
 .achievements {
   background: #fff;
   border-radius: 6px;
@@ -125,16 +163,17 @@ main#home {
 }
 .achievements h2 {
   margin-top: 0;
+  color: #003366;
 }
 .achievements ul {
   list-style: disc inside;
-  margin: 10px 0 0;
+  margin-top: 10px;
 }
 .achievements li {
   margin-bottom: 8px;
 }
 
-/* FEATURED CASES */
+/* Featured cases */
 .featured-cases {
   background: #fff;
   border-radius: 6px;
@@ -144,6 +183,7 @@ main#home {
 }
 .featured-cases h2 {
   margin-top: 0;
+  color: #003366;
 }
 .cases-grid {
   display: flex;
@@ -172,7 +212,7 @@ main#home {
   margin: 0 12px 12px;
 }
 
-/* TEASER STAFF */
+/* Teaser staff */
 .teaser-staff {
   background: #fff;
   border-radius: 6px;
@@ -181,13 +221,13 @@ main#home {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .teaser-staff h2 {
-  margin-top: 0;
+  color: #003366;
 }
 .staff-teaser {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top: 10px;
 }
 .teaser-card {
@@ -208,147 +248,10 @@ main#home {
   margin: 10px;
   font-size: 14px;
 }
-.staff-link {
-  text-align: center;
-  margin-top: 15px;
-}
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #003366;
-  color: #fff;
-  margin-top: 20px;
-}
-
-/* ===== ABOUT PAGE ===== */
-.content-section.about,
-.content-section.history,
-.content-section.tasks,
-.content-section.structure,
-.content-section.facts,
-.content-section.projects {
-  background: #fff;
-  border-radius: 6px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.content-section h2 {
-  margin-top: 0;
-  color: #003366;
-}
-
-/* Timeline */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 10px;
-}
-.timeline-item {
-  position: relative;
-  padding-left: 50px;
-}
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
-  background: #003366;
-  border-radius: 50%;
-}
-.timeline-item .year {
-  font-weight: bold;
-  color: #003366;
-  margin-right: 10px;
-}
-
-/* Full-width image */
-.full-img {
-  width: 100%;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-/* Facts grid */
-.fact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 10px;
-}
-.fact-card {
-  width: 180px;
-  text-align: center;
-}
-.fact-card img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-.fact-card p {
-  margin: 10px 0 0;
-  font-size: 14px;
-}
-
-/* Projects grid */
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 10px;
-}
-.project-card {
-  width: 240px;
-  background: #f9f9f9;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-.project-card img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-}
-.project-card h3 {
-  margin: 10px;
-  color: #003366;
-}
-.project-card p {
-  margin: 0 10px 10px;
-  font-size: 14px;
-}
-
-/* ===== ABOUT PAGE STYLES ===== */
-
-/* Hero */
-.about-hero {
-  background: url('images/about_bg.jpg') center/cover no-repeat;
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-  margin: 20px;
-}
-.about-hero::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-.about-hero .hero-inner {
-  position: relative;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
-.about-hero h1 { font-size: 32px; margin-bottom: 10px; }
-.about-hero p { font-size: 18px; margin-bottom: 20px; }
+/* ===================================================================
+   ================ ABOUT PAGE STYLES =================
+   =================================================================== */
 
 /* Mission & Vision */
 .mission-vision {
@@ -367,10 +270,12 @@ footer {
   text-align: center;
 }
 .mission-vision .mv-card img {
-  width: 50px; margin-bottom: 15px;
+  width: 50px;
+  margin-bottom: 15px;
 }
 .mission-vision .mv-card h2 {
-  color: #003366; margin-bottom: 10px;
+  color: #003366;
+  margin-bottom: 10px;
 }
 
 /* Timeline */
@@ -378,52 +283,84 @@ footer {
   margin: 20px;
 }
 .timeline-section h2 {
-  text-align: center; color: #003366; margin-bottom: 15px;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 15px;
 }
 .timeline {
   position: relative;
-  margin: 0 auto; padding-left: 40px;
+  margin: 0 auto;
+  padding-left: 40px;
   max-width: 800px;
 }
 .timeline::before {
   content: "";
-  position: absolute; left: 20px; top: 0; bottom: 0;
-  width: 4px; background: #003366; border-radius: 2px;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #003366;
+  border-radius: 2px;
 }
 .timeline .item {
-  position: relative; margin-bottom: 30px; padding-left: 30px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
 }
-.timeline .item:last-child { margin-bottom: 0; }
+.timeline .item:last-child {
+  margin-bottom: 0;
+}
 .timeline .item::before {
   content: "";
-  position: absolute; left: -2px; top: 5px;
-  width: 14px; height: 14px;
-  background: #ffcc00; border: 3px solid #003366;
+  position: absolute;
+  left: -2px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #ffcc00;
+  border: 3px solid #003366;
   border-radius: 50%;
 }
 .timeline .year {
-  font-weight: bold; color: #003366; margin-right: 8px;
+  font-weight: bold;
+  color: #003366;
+  margin-right: 8px;
 }
 
-/* Tasks */
+/* Tasks & Functions */
 .tasks-section {
   margin: 20px;
 }
 .tasks-section h2 {
-  text-align: center; color: #003366; margin-bottom: 15px;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 15px;
 }
 .tasks-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px; list-style: none; padding: 0; margin: 0;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .tasks-list li {
-  background: #fff; border-radius: 6px; padding: 15px;
-  display: flex; align-items: center; gap: 10px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.tasks-list li img { width: 36px; }
-.tasks-list li span { font-size: 14px; }
+.tasks-list li img {
+  width: 36px;
+  flex-shrink: 0;
+}
+.tasks-list li span {
+  font-size: 14px;
+}
 
 /* Structure */
 .structure-section {
@@ -431,7 +368,8 @@ footer {
   text-align: center;
 }
 .structure-img {
-  width: 100%; max-width: 800px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-bottom: 10px;
@@ -442,41 +380,68 @@ footer {
   margin: 20px;
 }
 .facts-section h2 {
-  text-align: center; color: #003366; margin-bottom: 15px;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 15px;
 }
 .facts-grid {
-  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 .facts-grid .fact {
-  background: #fff; width: 180px; text-align: center;
-  padding: 15px; border-radius: 6px;
+  background: #fff;
+  width: 180px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .facts-grid .fact img {
-  width: 100%; height: 100px; object-fit: cover; border-radius: 4px;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
 }
-.facts-grid .fact p { margin-top: 10px; font-size: 14px; }
+.facts-grid .fact p {
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 /* Projects */
 .projects-section {
   margin: 20px 0 40px;
 }
 .projects-section h2 {
-  text-align: center; color: #003366; margin-bottom: 15px;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 15px;
 }
 .projects-grid {
-  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 .projects-grid .proj-card {
-  background: #fff; width: 240px; border-radius: 6px; overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;
+  background: #fff;
+  width: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 .projects-grid .proj-card img {
-  width: 100%; height: 130px; object-fit: cover;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
 }
 .projects-grid .proj-card h3 {
-  margin: 12px 0 5px; color: #003366;
+  margin: 12px 0 5px;
+  color: #003366;
 }
 .projects-grid .proj-card p {
-  margin: 0 12px 12px; font-size: 14px;
+  margin: 0 12px 12px;
+  font-size: 14px;
 }
