@@ -1,164 +1,111 @@
 <main id="home">
-  <!-- HERO SECTION -->
+
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner container">
-      <h1>Защищаем ваши финансы от мошенников</h1>
-      <p>Федеральная служба по финансовому мониторингу оперативно выявляет и пресекает любые схемы финансового обмана на территории Российской Федерации.</p>
+    <div class="container hero-inner">
+      <h1>Федеральная служба по финансовому мониторингу</h1>
+      <p>Обеспечиваем прозрачность финансовых потоков и защищаем граждан от мошеннических схем.</p>
       <div class="hero-buttons">
-        <button class="btn" onclick="location.href='#about'">Узнать больше</button>
-        <button class="btn" onclick="location.href='contact.html'">Сообщить о мошенничестве</button>
+        <a href="#about" class="btn">О службе</a>
+        <a href="#blacklist" class="btn">Проверить номер</a>
       </div>
-      <ul class="hero-highlights">
-        <li><strong>24/7</strong> круглосуточный мониторинг</li>
-        <li><strong>3,5&nbsp;млрд</strong> проверенных транзакций в год</li>
-        <li><strong>2&nbsp;млн</strong> заблокированных номеров</li>
-      </ul>
     </div>
   </section>
 
-  <!-- STATISTICS SECTION -->
+  <!-- QUICK LINKS -->
+  <section class="content-section container">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+      <a href="blacklist.html" class="quick-card">
+        <h3>Проверка номера</h3>
+        <p>Узнайте, внесён ли телефон в чёрный список.</p>
+      </a>
+      <a href="docs.html" class="quick-card">
+        <h3>Нормативные акты</h3>
+        <p>Законодательство и отчёты Росфинмониторинга.</p>
+      </a>
+      <a href="news.html" class="quick-card">
+        <h3>Последние новости</h3>
+        <p>Актуальные события и пресс-релизы.</p>
+      </a>
+      <a href="contact.html" class="quick-card">
+        <h3>Обратная связь</h3>
+        <p>Сообщите о подозрении на мошенничество.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- STATISTICS -->
   <section class="stats container">
     <div class="stat-card">
       <h3>120+</h3>
-      <p>закрытых колл‑центров</p>
-      <p>Наши оперативники выявили и ликвидировали более ста двадцати нелегальных колл‑центров по всей стране.</p>
+      <p>закрытых колл-центров</p>
     </div>
     <div class="stat-card">
-      <h3>550&nbsp;млн ₽</h3>
-      <p>возвращено пострадавшим</p>
-      <p>Средства, незаконно списанные с карт граждан, были возвращены в полном объеме благодаря оперативным мерам.</p>
+      <h3>3,5 млрд</h3>
+      <p>проверенных транзакций</p>
     </div>
     <div class="stat-card">
-      <h3>3 200</h3>
-      <p>документированных кейсов</p>
-      <p>Детальный анализ и расследование более трёх тысяч двухсот дел по схемам финансового мошенничества.</p>
+      <h3>2 млн</h3>
+      <p>заблокированных номеров</p>
     </div>
     <div class="stat-card">
       <h3>8</h3>
-      <p>специализированных подразделений</p>
-      <p>Включая отделы кибербезопасности, аналитики и взаимодействия с правоохранительными органами.</p>
+      <p>специализированных отделов</p>
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <section id="about" class="content-section container">
     <h2 class="section-title">О службе</h2>
-    <p>Федеральная служба по финансовому мониторингу (Росфинмониторинг) — федеральный орган, отвечающий за противодействие легализации (отмыванию) доходов, полученных преступным путём, и финансированию терроризма. Служба осуществляет:</p>
-    <ul>
-      <li>Мониторинг денежных переводов и операций с электронными средствами платежа.</li>
-      <li>Ведение единой федеральной базы подозрительных операций.</li>
-      <li>Координацию деятельности органов МВД, ФСБ, ЦБ и других.</li>
-      <li>Разработку нормативно-правовых актов и методических рекомендаций.</li>
+    <p>Росфинмониторинг проводит мониторинг и анализ финансовых операций, координирует усилия правоохранительных органов и разрабатывает нормативно-правовые акты в сфере противодействия отмыванию доходов и финансированию терроризма.</p>
+    <ul class="tasks-list">
+      <li>Ведение федеральной базы подозрительных операций</li>
+      <li>Мониторинг денежных переводов и электронных платежей</li>
+      <li>Взаимодействие с МВД, ФСБ, ЦБ и международными партнёрами</li>
+      <li>Разработка методических рекомендаций и стандартов</li>
+      <li>Обучение и повышение квалификации сотрудников банков</li>
     </ul>
-    <h3>Организационная структура</h3>
-    <table>
-      <thead>
-        <tr><th>Подразделение</th><th>Функции</th><th>Руководитель</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Отдел кибербезопасности</td><td>Выявление цифровых атак и SIM‑схем</td><td>Иван Петров</td></tr>
-        <tr><td>Аналитический центр</td><td>Обработка больших данных и ML‑анализ</td><td>Анна Сидорова</td></tr>
-        <tr><td>Оперативный отдел</td><td>Проведение рейдов и задержаний</td><td>Михаил Андреев</td></tr>
-      </tbody>
-    </table>
   </section>
 
-  <!-- FEATURED CASES SECTION -->
-  <section id="cases" class="content-section container">
-    <h2 class="section-title">Последние раскрытые схемы</h2>
-    <article class="case-card">
-      <h3>Фальшивый колл‑центр в Казани</h3>
-      <p>Оперативное закрытие центра, задействовавшего более 150 операторов, предотвратило хищение 45&nbsp;млн ₽.</p>
-      <ul>
-        <li><em>Дата начала:</em> 05.05.2025</li>
-        <li><em>Локация:</em> Казань, ул. Пушкина</li>
-        <li><em>Результат:</em> Задержано 12 человек, возвращено 45&nbsp;млн ₽.</li>
-      </ul>
-    </article>
-    <article class="case-card">
-      <h3>Отмыв через псевдо‑НКО</h3>
-      <p>Закрытие подпольной организации, использовавшей схемы подставных благотворительных фондов.</p>
-      <ul>
-        <li><em>Дата начала:</em> 12.04.2025</li>
-        <li><em>Ущерб:</em> 12&nbsp;млн ₽</li>
-        <li><em>Результат:</em> Выявлено и ликвидировано 5 «однодневок».</li>
-      </ul>
-    </article>
-    <article class="case-card">
-      <h3>SIM‑swapping в Москве</h3>
-      <p>Блокировка сети из 300 поддельных SIM‑карт, предотвращена кража 9&nbsp;млн ₽.</p>
-      <ul>
-        <li><em>Дата начала:</em> 20.03.2025</li>
-        <li><em>Механизм:</em> Перехват SMS‑код</li>
-        <li><em>Результат:</em> Заблокировано 300 карт, задержано 4 организатора.</li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- TEAM TEASER SECTION -->
-  <section id="team" class="teaser-staff container">
-    <h2 class="section-title">Наша команда</h2>
-    <div class="staff-teaser">
-      <div class="teaser-card">
-        <h3>Иван Петров</h3>
-        <p><em>Начальник отдела кибербезопасности</em></p>
-        <p>Эксперт в предотвращении цифровых атак и SIM‑схем, за плечами более 50 успешных операций.</p>
-      </div>
-      <div class="teaser-card">
-        <h3>Анна Сидорова</h3>
-        <p><em>Специалист по финансовому анализу</em></p>
-        <p>Руководитель аналитического центра, разработала ML‑модель для выявления подозрительных переводов.</p>
-      </div>
-      <div class="teaser-card">
-        <h3>Михаил Андреев</h3>
-        <p><em>Оперативный аналитик</em></p>
-        <p>Куратор полевых операций, лично проводил рейды в пяти регионах РФ.</p>
-      </div>
-    </div>
-    <p class="text-center mt-2"><a href="staff.html" class="btn">Все сотрудники →</a></p>
-  </section>
-
-  <!-- NEWS SECTION -->
-  <section id="news" class="content-section container">
-    <h2 class="section-title">Последние новости</h2>
+  <!-- NEWS PREVIEW -->
+  <section class="content-section container">
+    <h2 class="section-title">Актуальные новости</h2>
     <ul class="news-list">
-      <li><span class="date">12.06.2025</span> — Пресечена деятельность крупного мошеннического колл‑центра в Казани.</li>
-      <li><span class="date">10.06.2025</span> — Задержана группа банковских мошенников в Сочи.</li>
-      <li><span class="date">05.06.2025</span> — Обновлена федеральная база подозрительных eSIM-карт.</li>
-      <li><span class="date">01.06.2025</span> — Проведён семинар по финансовой грамотности для сотрудников банков.</li>
-      <li><span class="date">28.05.2025</span> — Внедрена новая система автоматического мониторинга транзакций.</li>
+      <li><span class="date">12.06.2025</span> — Пресечена деятельность крупного мошеннического колл-центра в Казани.</li>
+      <li><span class="date">05.06.2025</span> — Обновлена база подозрительных eSIM-карт.</li>
+      <li><span class="date">01.06.2025</span> — Внедрена новая система автоматического мониторинга.</li>
     </ul>
+    <p class="text-center mt-2"><a href="news.html" class="btn">Все новости →</a></p>
   </section>
 
-  <!-- DOCUMENTS SECTION -->
-  <section id="docs" class="content-section container">
+  <!-- DOCUMENTS PREVIEW -->
+  <section class="content-section container">
     <h2 class="section-title">Нормативная база</h2>
     <ul class="doc-list">
-      <li><a href="files/fz_115.pdf" download>Федеральный закон №115-ФЗ «О противодействии легализации доходов»</a></li>
-      <li><a href="files/postanovlenie_307.pdf" download>Постановление Правительства №307 «О системе и структуре Росфинмониторинга»</a></li>
-      <li><a href="files/pravila_vnutren.kontrolya.pdf" download>Правила внутреннего контроля</a></li>
-      <li><a href="files/otchet_2024.pdf" download>Отчет о борьбе с мошенничеством 2024</a></li>
-      <li><a href="files/metod_rekomendacii.pdf" download>Методические рекомендации</a></li>
+      <li><a href="files/fz_115.pdf" download>ФЗ №115-ФЗ «О противодействии легализации доходов»</a></li>
+      <li><a href="files/post_307.pdf" download>Постановление №307 «О системе Росфинмониторинга»</a></li>
+      <li><a href="files/pravila.pdf" download>Правила внутреннего контроля</a></li>
     </ul>
+    <p class="text-center mt-2"><a href="docs.html" class="btn">Все документы →</a></p>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- CONTACT -->
   <section id="contact" class="content-section container">
-    <h2 class="section-title">Контакты и обратная связь</h2>
-    <div class="flex flex-center">
+    <h2 class="section-title">Контакты</h2>
+    <div class="flex flex-center" style="gap:var(--space-lg);flex-wrap:wrap;">
+      <div class="contact-info">
+        <p>107450, г. Москва, ул. Мясницкая, д. 39, стр. 1</p>
+        <p>Тел./факс: (495) 627-33-97</p>
+        <p><a href="https://www.fedsfm.ru" target="_blank">www.fedsfm.ru</a></p>
+      </div>
       <form onsubmit="return validateForm()" class="contact-form">
         <label>Имя:<br><input type="text" id="name" required></label>
         <label>Email:<br><input type="email" id="email" required></label>
-        <label>Сообщение:<br><textarea id="message" rows="5" required></textarea></label>
+        <label>Сообщение:<br><textarea id="message" rows="4" required></textarea></label>
         <button type="submit" class="btn">Отправить</button>
+        <p id="formResult"></p>
       </form>
-      <div class="contact-info ml-2">
-        <p>107450, г. Москва, ул. Мясницкая, д. 39, стр. 1</p>
-        <p>Тел./факс: (495) 627‑33‑97</p>
-        <p><a href="https://www.fedsfm.ru" target="_blank">www.fedsfm.ru</a></p>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aexample" width="100%" height="250" frameborder="0"></iframe>
-      </div>
     </div>
-    <p id="formResult"></p>
   </section>
+
 </main>
